@@ -1,18 +1,178 @@
-/**
-  |============================
-  | include css partials with
-  | default @import url()
-  |============================
-*/
-/* Common styles */
 @import url('./reset.css');
 @import url('./base.css');
 @import url('./container.css');
-@import url('./animations.css');
-
-/* Sections style */
-@import url('./header.css');
-@import url('./vite-promo.css');
 @import url('./badges.css');
 @import url('./back-link.css');
-@import url('./footer.css');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 16px;
+  font-family: Montserrat;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #fafafa;
+  color: #212121;
+  line-height: 1.5;
+}
+
+button {
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0.04em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  padding: 20px;
+}
+
+.main-title {
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+#datetime-picker {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+button[data-start] {
+  width: 75px;
+  padding: 10px;
+  background-color: #d3d3d3;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: not-allowed;
+}
+
+button[data-start]:not(:disabled) {
+  background-color: #4e75ff;
+  color: white;
+  cursor: pointer;
+}
+
+button[data-start]:hover:not(:disabled) {
+  background-color: #6c8cff;
+}
+
+.picker_with_button {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.timer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.field {
+  text-align: center;
+}
+
+.value {
+  display: block;
+  font-size: 36px;
+}
+
+.label {
+  font-size: 14px;
+  color: #666;
+}
+
+#datetime-picker:hover {
+  border-color: #000000;
+}
+
+button[data-start]:disabled {
+  background-color: #d3d3d3;
+  color: #999;
+  cursor: not-allowed;
+}
+
+/* ----------------------------------------------- */
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-self: start;
+  width: 360px;
+}
+
+.form .label-form {
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+}
+
+input[type='number'] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+fieldset {
+  text-align: left;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  display: flex;
+  gap: 48px;
+  justify-content: center;
+}
+
+button[type='submit'] {
+  background-color: #4e75ff;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 24px;
+  height: 40px;
+}
+
+button[type='submit']:hover {
+  background-color: #6c8cff;
+}
